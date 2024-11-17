@@ -29,7 +29,7 @@
 
 .svg-list {
   display: flex; /* Enables flexbox */
-  gap: 60px; /* Adjust the spacing between items */
+  gap: 70px; /* Adjust the spacing between items */
   justify-content: center; /* Optional: centers the items */
   align-items: center; /* Optional: aligns items vertically */
   margin-top: 60px;
