@@ -1,0 +1,140 @@
+.full-app {
+  background-color: brown;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  display: flex; /* Optional: Center children */
+  flex-direction: column; /* Optional: Vertical stacking */
+  justify-content: center; /* Optional: Center content vertically */
+  align-items: center; /* Optional: Center content horizontally */
+}
+.Name {
+  font-size: 3rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.svg-list img {
+  width: 80px;
+  height: auto;
+  margin: 20px;
+  animation: slideIn 1s ease-in-out forwards; /* Applies slide-in animation */
+  opacity: 0; /* Starts as invisible */
+}
+
+.svg-list {
+  display: flex; /* Enables flexbox */
+  gap: 60px; /* Adjust the spacing between items */
+  justify-content: center; /* Optional: centers the items */
+  align-items: center; /* Optional: aligns items vertically */
+  margin-top: 60px;
+}
+
+.header {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Ensures space between text and image (optional) */
+}
+
+.headshot-image {
+  width: 200px; /* Set the desired size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Optional for circular image */
+  margin-left: 250px; /* Space between text and image */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 1); /* Adds a soft shadow */
+}
+
+.svg-list img:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+  transform: scale(1.1); /* Slightly enlarge the SVG for emphasis */
+  background-color: #ff804f;
+  border-radius: 20%;
+}
+
+.words h1:hover,
+.words p:hover {
+  color: #f39c12; /* Changes color on hover */
+  text-shadow: 3px 3px 10px rgba(255, 165, 0, 0.7); /* Glowing effect */
+  transition: color 0.3s ease, text-shadow 0.7s ease; /* Smooth transition */
+}
+
+.words h1 {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out; /* Applies a fade-in animation */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+}
+
+.words p {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  animation: slideIn 2s ease-out; /* Applies a sliding animation */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .full-app {
+    padding: 10px; /* Add padding for smaller screens */
+  }
+
+  .header {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .headshot-image {
+    width: 150px; /* Reduce size for smaller screens */
+    margin-left: 0; /* Remove left margin */
+    margin-top: 20px; /* Add spacing above */
+  }
+
+  .Name {
+    font-size: 2.5rem; /* Adjust font size */
+    animation: floatInTop 1.5s ease-out; /* Add float-in animation */
+  }
+
+  .text {
+    font-size: 1.2rem; /* Adjust font size */
+    margin-left: 0; /* Center text */
+    margin-top: 10px; /* Add spacing above */
+    animation: floatInTop 1.8s ease-out; /* Slightly delay the animation for the subtitle */
+  }
+
+  .svg-list {
+    gap: 20px; /* Reduce gap between icons */
+    margin-top: 40px; /* Adjust spacing */
+    flex-wrap: wrap; /* Allow wrapping for narrow screens */
+  }
+
+  .svg-list img {
+    width: 60px; /* Reduce size of icons */
+    margin: 10px; /* Reduce margins */
+  }
+}
